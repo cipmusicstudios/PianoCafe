@@ -156,7 +156,7 @@ function TopNav({ activeView, setActiveView }: { activeView: View, setActiveView
 
   return (
     <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-6">
-      <div className="glass-panel rounded-full px-6 py-3 flex items-center justify-between gap-4 max-w-6xl w-full">
+      <div className="frosted glass-panel rounded-full px-6 py-3 flex items-center justify-between gap-4 max-w-6xl w-full">
         
         {/* Empty div to balance the flex layout since brand is gone */}
         <div className="w-8 hidden md:block"></div>
