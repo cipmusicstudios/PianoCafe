@@ -135,4 +135,26 @@ body {
   75% { opacity: 0.3; transform: scale(1.04); }
   100% { opacity: 0.2; transform: scale(1); }
 }
+/* Neutral frosted glass — strong blur + milky haze (no dark tint) */
+.frosted {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.32);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+}
 
+.frosted::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.24); /* 关键：让它不再像透明玻璃 */
+  backdrop-filter: blur(58px) saturate(165%);
+  -webkit-backdrop-filter: blur(58px) saturate(165%);
+  pointer-events: none;
+}
+
+.frosted > * {
+  position: relative;
+  z-index: 1;
+}
