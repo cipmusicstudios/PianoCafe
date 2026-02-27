@@ -168,7 +168,7 @@ function TopNav({ activeView, setActiveView }: { activeView: View, setActiveView
               onClick={() => setActiveView(tab.id)}
               className={`px-5 md:px-6 py-2 rounded-full transition-all duration-300 font-medium whitespace-nowrap flex items-center gap-2 ${
                 activeView === tab.id 
-                  ? 'glass-panel-active text-white shadow-lg' 
+                  ? 'frosted glass-panel-active text-white shadow-lg' 
                   : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -207,7 +207,7 @@ function BottomPlayer({
 }) {
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-50 flex justify-center">
-      <div className="glass-panel rounded-none border-x-0 border-b-0 p-4 flex items-center gap-6 w-full px-6 md:px-12">
+      <div className="frosted glass-panel rounded-none border-x-0 border-b-0 p-4 flex items-center gap-6 w-full px-6 md:px-12">
         <div className="flex items-center gap-4 w-1/4 min-w-[200px]">
           <img 
             src={currentTrack.cover} 
@@ -259,7 +259,7 @@ function BottomPlayer({
           <div className="w-24 h-1.5 bg-white/20 rounded-full overflow-hidden cursor-pointer group">
             <div className="h-full bg-white/80 w-2/3 group-hover:bg-white transition-colors"></div>
           </div>
-          <div className="glass-panel px-2 py-1 rounded-md text-xs font-medium ml-2">
+          <div className="frosted glass-panel px-2 py-1 rounded-md text-xs font-medium ml-2">
             1.0x
           </div>
         </div>
@@ -391,13 +391,13 @@ function MusicTab({
                   placeholder="Search artists..." 
                   value={artistSearchQuery}
                   onChange={(e) => setArtistSearchQuery(e.target.value)}
-                  className="glass-panel rounded-full pl-12 pr-6 py-2.5 text-sm w-64 focus:outline-none focus:bg-white/20 transition-colors text-white placeholder-white/50"
+                  className="frosted glass-panel rounded-full pl-12 pr-6 py-2.5 text-sm w-64 focus:outline-none focus:bg-white/20 transition-colors text-white placeholder-white/50"
                 />
               </div>
               <select 
                 value={artistSortBy} 
                 onChange={(e) => setArtistSortBy(e.target.value as any)}
-                className="glass-panel rounded-full px-4 py-2.5 text-sm focus:outline-none focus:bg-white/20 transition-colors text-white appearance-none cursor-pointer"
+                className="frosted glass-panel rounded-full px-4 py-2.5 text-sm focus:outline-none focus:bg-white/20 transition-colors text-white appearance-none cursor-pointer"
               >
                 <option value="a_z" className="bg-neutral-800">A–Z</option>
                 <option value="z_a" className="bg-neutral-800">Z–A</option>
@@ -433,7 +433,7 @@ function MusicTab({
                 setSelectedCategories(['All']);
                 setSearchQuery('');
               }}
-              className="glass-panel p-6 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors flex flex-col items-center text-center gap-4 group"
+              className="frosted glass-panel p-6 rounded-3xl cursor-pointer hover:bg-white/10 transition-colors flex flex-col items-center text-center gap-4 group"
             >
               <img 
                 src={artist.cover} 
@@ -502,13 +502,13 @@ function MusicTab({
                   placeholder="Search songs, artists, or tags..." 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="glass-panel rounded-full pl-12 pr-6 py-2.5 text-sm w-64 focus:outline-none focus:bg-white/20 transition-colors text-white placeholder-white/50"
+                  className="frosted glass-panel rounded-full pl-12 pr-6 py-2.5 text-sm w-64 focus:outline-none focus:bg-white/20 transition-colors text-white placeholder-white/50"
                 />
               </div>
               <select 
                 value={sortBy} 
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="glass-panel rounded-full px-4 py-2.5 text-sm focus:outline-none focus:bg-white/20 transition-colors text-white appearance-none cursor-pointer"
+                className="frosted glass-panel rounded-full px-4 py-2.5 text-sm focus:outline-none focus:bg-white/20 transition-colors text-white appearance-none cursor-pointer"
               >
                 <option value="recently_played" className="bg-neutral-800">Recently Played</option>
                 <option value="a_z" className="bg-neutral-800">A–Z</option>
@@ -534,7 +534,7 @@ function MusicTab({
           </div>
         </div>
 
-        <div className="glass-panel rounded-[32px] overflow-hidden flex flex-col">
+        <div className="frosted glass-panel rounded-[32px] overflow-hidden flex flex-col">
           <div className="grid grid-cols-12 gap-4 px-8 py-4 border-b border-white/10 text-sm font-medium text-white/60 uppercase tracking-wider">
             <div className="col-span-1 text-center">#</div>
             <div className="col-span-6">Title</div>
@@ -593,7 +593,7 @@ function MusicTab({
     <div className="w-full max-w-5xl mx-auto flex flex-col animate-in fade-in duration-500">
       {musicView !== 'artist_detail' && (
         <div className="flex justify-center mb-8">
-          <div className="glass-panel rounded-full p-1 flex items-center">
+          <div className="frosted glass-panel rounded-full p-1 flex items-center">
             <button
               onClick={() => setMusicView('artists')}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${musicView === 'artists' ? 'bg-white/20 text-white shadow-sm' : 'text-white/60 hover:text-white'}`}
@@ -718,7 +718,7 @@ function FocusTab({
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* 2) AMBIENCE MIXER SECTION */}
-        <div className="glass-panel p-6 rounded-3xl flex flex-col gap-6">
+        <div className="frosted glass-panel p-6 rounded-3xl flex flex-col gap-6">
           <div className="flex justify-between items-center">
             <h3 className="text-xl font-medium text-white/90">Ambience Mixer</h3>
             <span className="text-xs text-amber-200/80 bg-amber-200/10 px-3 py-1 rounded-full font-medium">Free: 1 Active</span>
@@ -769,7 +769,7 @@ function FocusTab({
 
         {/* 3) SESSION SECTION */}
         <div className="flex flex-col gap-8">
-          <div className="glass-panel p-6 rounded-3xl flex flex-col gap-6">
+          <div className="frosted glass-panel p-6 rounded-3xl flex flex-col gap-6">
             <h3 className="text-xl font-medium text-white/90">Session Timer</h3>
             
             <div className="flex bg-white/5 rounded-xl p-1">
@@ -913,7 +913,7 @@ function SettingsTab() {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Account */}
-        <div className="glass-panel p-6 rounded-[32px] flex flex-col gap-6">
+        <div className="frosted glass-panel p-6 rounded-[32px] flex flex-col gap-6">
           <h3 className="text-lg font-medium text-white/80">Account</h3>
           
           <div className="flex flex-col gap-4">
@@ -940,7 +940,7 @@ function SettingsTab() {
         </div>
         
         {/* Subscription */}
-        <div className="glass-panel p-6 rounded-[32px] flex flex-col gap-6">
+        <div className="frosted glass-panel p-6 rounded-[32px] flex flex-col gap-6">
           <h3 className="text-lg font-medium text-white/80">Subscription</h3>
           
           <div className="flex flex-col gap-4">
@@ -981,7 +981,7 @@ function SettingsTab() {
         </div>
         
         {/* Theme Preferences */}
-        <div className="glass-panel p-6 rounded-[32px] flex flex-col gap-6">
+        <div className="frosted glass-panel p-6 rounded-[32px] flex flex-col gap-6">
           <h3 className="text-lg font-medium text-white/80">Theme Preferences</h3>
           
           <div className="grid grid-cols-2 gap-3">
